@@ -4,6 +4,8 @@ window = tk.Tk()
 window.title("Pokemon Menu")
 window.configure(bg="#e6f7ff")
 
+
+
 #window.geometry("300x300")
 
 #pokemon_single_menu = tk.Button(#menu button, goes to the window which does a single pokemon 
@@ -32,11 +34,14 @@ window.configure(bg="#e6f7ff")
 #second_window = tk.Tk()
 #second_window.title("Pokeodex")
 
+def search_group_tab():
+    new_window = tk.Toplevel() 
+
 frame1 = tk.Frame(master=window, relief = tk.GROOVE, borderwidth=3)
 frame1.pack()
 
 menu_search_indivdual = tk.Button(#first button, on the left, in the first window
-    text="Search for a single pokemon;\n for example Pikachu, Charmander, etc.",
+    text="Search for a single pokemon.",
     fg="black",
     bg="#0099e6",
     master=frame1
@@ -45,9 +50,10 @@ menu_search_indivdual.grid(row=0, column=0, padx=0, pady=4)
 
 
 menu_search_group = tk.Button(#second button, on the left, in the first window
-    text="Search for a type of pokemon;\n for example fire, water, etc.",
+    text="Search for a type of pokemon.",
     fg="black",
     bg="#33bbff",
+    command = search_group_tab,
     master=frame1
 )
 menu_search_group.grid(row=0, column=1, padx=10, pady=4)
@@ -60,6 +66,7 @@ menu_search_saved_data = tk.Button(#third button, on the left, in the first wind
     master=frame1
 )
 menu_search_saved_data.grid(row=0, column=2, padx=1, pady=4)
+
 
 
 window.mainloop()
