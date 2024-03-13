@@ -34,8 +34,13 @@ window.configure(bg="#e6f7ff")
 #second_window = tk.Tk()
 #second_window.title("Pokeodex")
 
+def search_indivdual_tab():
+    new_window = tk.Toplevel()
+    new_window.geometry("100x100")
+
 def search_group_tab():
     new_window = tk.Toplevel() 
+
 
 frame1 = tk.Frame(master=window, relief = tk.GROOVE, borderwidth=3)
 frame1.pack()
@@ -44,6 +49,7 @@ menu_search_indivdual = tk.Button(#first button, on the left, in the first windo
     text="Search for a single pokemon.",
     fg="black",
     bg="#0099e6",
+    command = search_indivdual_tab,
     master=frame1
 )
 menu_search_indivdual.grid(row=0, column=0, padx=0, pady=4)
